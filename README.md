@@ -53,6 +53,12 @@ bench get-app $URL_OF_THIS_REPO --branch main
 bench install-app floorgraph
 ```
 
+To try it with realistic sample data (a Company, BOM, Work Order, and Job Cards) instead of starting from an empty site:
+
+```bash
+bench --site $SITE execute floorgraph.setup.demo_manufacturing.create_demo_manufacturing_data
+```
+
 ### Contributing
 
 `main` is the stable branch installs should target; `develop` is where active work lands before a release. Open PRs against `develop`.
@@ -70,6 +76,12 @@ Pre-commit is configured to use the following tools for checking and formatting 
 - eslint
 - prettier
 - pyupgrade
+
+Run the test suite with:
+
+```bash
+bench --site $SITE run-tests --app floorgraph
+```
 
 ### CI
 
