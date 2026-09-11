@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2026-08-21 16:25:31.446957",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "workstation",
+  "company",
+  "from_item",
+  "to_item",
+  "changeover_minutes"
+ ],
+ "fields": [
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "From Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "To Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "changeover_minutes",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Changeover (Minutes)",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-21 16:25:31.446957",
+ "modified_by": "Administrator",
+ "module": "Floorgraph",
+ "name": "Changeover Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Floorgraph Operator"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

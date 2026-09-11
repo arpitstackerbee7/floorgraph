@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:source_name",
+ "creation": "2026-09-07 11:21:10.354401",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "source_name",
+  "workstation",
+  "company",
+  "enabled",
+  "column_break_secret",
+  "secret",
+  "section_break_actions",
+  "allowed_actions"
+ ],
+ "fields": [
+  {
+   "description": "Stable identifier for this device/integration. Used as the doc name and as the source_name the webhook payload must send.",
+   "fieldname": "source_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Workstation",
+   "options": "Workstation"
+  },
+  {
+   "description": "Which Company this device belongs to - config, not derived (unlike Workstation, a Machine Event Source has no other reliable path to one).",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_secret",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "HMAC-SHA256 key shared with the device. Never exposed via list view or the REST API.",
+   "fieldname": "secret",
+   "fieldtype": "Password",
+   "label": "Secret",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_actions",
+   "fieldtype": "Section Break",
+   "label": "Allowed Actions"
+  },
+  {
+   "description": "If empty, this source cannot request any Action (deny-by-default, mirrors Action.allowed_roles).",
+   "fieldname": "allowed_actions",
+   "fieldtype": "Table",
+   "label": "Allowed Actions",
+   "options": "Machine Event Source Allowed Action"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-07 11:21:10.354401",
+ "modified_by": "Administrator",
+ "module": "Floorgraph",
+ "name": "Machine Event Source",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:action_name",
+ "creation": "2026-08-21 15:27:13.565504",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action_name",
+  "label",
+  "description",
+  "column_break_handler",
+  "handler",
+  "requires_approval",
+  "disabled",
+  "section_break_roles",
+  "allowed_roles"
+ ],
+ "fields": [
+  {
+   "description": "Stable identifier, e.g. record_downtime. Used as the doc name.",
+   "fieldname": "action_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Label",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_handler",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Dotted Python path to a function(action_log) -> dict, e.g. floorgraph.actions.handlers.record_downtime",
+   "fieldname": "handler",
+   "fieldtype": "Data",
+   "label": "Handler",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "description": "If unchecked, requests execute immediately instead of waiting for approve_action().",
+   "fieldname": "requires_approval",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Requires Approval"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "section_break_roles",
+   "fieldtype": "Section Break",
+   "label": "Who Can Request This Action"
+  },
+  {
+   "description": "If empty, only System Manager can request this action (deny-by-default).",
+   "fieldname": "allowed_roles",
+   "fieldtype": "Table",
+   "label": "Allowed Roles",
+   "options": "Action Allowed Role"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-21 15:27:13.565504",
+ "modified_by": "Administrator",
+ "module": "Floorgraph",
+ "name": "Action",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

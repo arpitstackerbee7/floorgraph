@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:rule_name",
+ "creation": "2026-09-07 11:21:10.768693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "enabled",
+  "company",
+  "description",
+  "section_break_condition",
+  "source_doctype",
+  "field",
+  "column_break_condition",
+  "operator",
+  "threshold",
+  "filters",
+  "section_break_target",
+  "target_action"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_condition",
+   "fieldtype": "Section Break",
+   "label": "Condition"
+  },
+  {
+   "description": "Doctype the scheduled evaluator scans, e.g. Workstation OEE Log.",
+   "fieldname": "source_doctype",
+   "fieldtype": "Link",
+   "label": "Source Doctype",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "description": "Fieldname on Source Doctype to compare against Threshold, e.g. availability.",
+   "fieldname": "field",
+   "fieldtype": "Data",
+   "label": "Field",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_condition",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Select",
+   "label": "Operator",
+   "options": "<\n<=\n>\n>=\n==\n!=",
+   "reqd": 1
+  },
+  {
+   "fieldname": "threshold",
+   "fieldtype": "Float",
+   "label": "Threshold",
+   "reqd": 1
+  },
+  {
+   "description": "Optional static filters merged into the scan query, e.g. {\"workstation\": \"Welding Bay 2\"}. Structured filters only, no eval.",
+   "fieldname": "filters",
+   "fieldtype": "Code",
+   "label": "Extra Filters",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "section_break_target",
+   "fieldtype": "Section Break",
+   "label": "Target"
+  },
+  {
+   "description": "Requested with source=Agent whenever a match fires - always lands Pending regardless of this Action's own requires_approval setting.",
+   "fieldname": "target_action",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Action",
+   "options": "Action",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-09-07 11:21:10.768693",
+ "modified_by": "Administrator",
+ "module": "Floorgraph",
+ "name": "Agent Rule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

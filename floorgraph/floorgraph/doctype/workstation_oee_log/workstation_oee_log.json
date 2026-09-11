@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-21 16:00:11.170054",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "workstation",
+  "company",
+  "log_date",
+  "section_break_availability",
+  "planned_minutes",
+  "unplanned_downtime_minutes",
+  "column_break_availability",
+  "run_minutes",
+  "availability",
+  "section_break_performance",
+  "actual_qty",
+  "ideal_run_minutes",
+  "column_break_performance",
+  "performance",
+  "section_break_quality",
+  "good_qty",
+  "scrap_qty",
+  "column_break_quality",
+  "quality",
+  "section_break_oee",
+  "oee"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "OEE-.YYYY.-.#####",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Workstation",
+   "options": "Workstation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "log_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Log Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_availability",
+   "fieldtype": "Section Break",
+   "label": "Availability"
+  },
+  {
+   "fieldname": "planned_minutes",
+   "fieldtype": "Float",
+   "label": "Planned Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "unplanned_downtime_minutes",
+   "fieldtype": "Float",
+   "label": "Unplanned Downtime Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_availability",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "run_minutes",
+   "fieldtype": "Float",
+   "label": "Run Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "availability",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Availability",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_performance",
+   "fieldtype": "Section Break",
+   "label": "Performance"
+  },
+  {
+   "fieldname": "actual_qty",
+   "fieldtype": "Float",
+   "label": "Actual Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ideal_run_minutes",
+   "fieldtype": "Float",
+   "label": "Ideal Run Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_performance",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performance",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Performance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_quality",
+   "fieldtype": "Section Break",
+   "label": "Quality"
+  },
+  {
+   "fieldname": "good_qty",
+   "fieldtype": "Float",
+   "label": "Good Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "scrap_qty",
+   "fieldtype": "Float",
+   "label": "Scrap Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_quality",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Quality",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_oee",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "oee",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "OEE",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-21 16:00:11.170054",
+ "modified_by": "Administrator",
+ "module": "Floorgraph",
+ "name": "Workstation OEE Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Floorgraph Operator"
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "log_date",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
