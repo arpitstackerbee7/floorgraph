@@ -21,7 +21,14 @@ required_apps = ["erpnext"]
 # 		"has_permission": "floorgraph.api.permission.has_app_permission"
 # 	}
 # ]
-
+add_to_apps_screen = [
+     {
+             "name": "floorgraph",
+             "logo": "/assets/floorgraph/logo.png",
+             "title": "Floorgraph",
+             "route": "/desk/shop-floor",
+     }
+]
 # Includes in <head>
 # ------------------
 
